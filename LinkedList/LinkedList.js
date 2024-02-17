@@ -133,5 +133,7 @@ list.append(2);
 // list.insert(2, 43)
 // list.delete(43)
 // list.deleteByIndex(1)
-list.reverse()
-list.print()
+// list.reverse()
+// list.print()
+
+module.exports = {LinkedList}
