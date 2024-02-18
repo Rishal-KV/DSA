@@ -111,7 +111,17 @@ class LinkedList {
         }
         reverseRecursive(this.head, null)
     }
-    
+    search(pos){
+        console.log(pos);
+        if (pos < 0 || pos > this.size) {
+            return "invalid index!!"
+        }
+        let curr = this.head;
+        for(let i = 1; i < pos ; i++){
+            curr = curr.next
+        }
+        return curr;
+    }
     print() {
         let curr = this.head;
         let ele = " "
@@ -124,12 +134,12 @@ class LinkedList {
     }
 }
 
-let list = new LinkedList();
-list.append(10)
-list.append(20)
-list.append(30)
-list.append(40)
-list.append(2);
+// let list = new LinkedList();
+// list.append(10)
+// list.append(20)
+// list.append(30)
+// list.append(40)
+// list.append(2);
 // list.insert(2, 43)
 // list.delete(43)
 // list.deleteByIndex(1)
