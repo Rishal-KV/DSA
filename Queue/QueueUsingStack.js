@@ -1,6 +1,6 @@
 class Stack {
     constructor() {
-        this.items = []; // Corrected 'items' property name for clarity
+        this.items = []; 
     }
 
     push(element) {
