@@ -45,7 +45,7 @@ class BST {
         if (root) {
            console.log(root.value);
            this.preOrder(root.left);
-           this.preOrder(root.right) 
+           this.preOrder(root.right);
         }
     }
 
@@ -53,7 +53,7 @@ class BST {
         if (root) {
             this.indOrder(root.left);
             console.log(root.value);
-            this.indOrder(root.right)
+            this.indOrder(root.right);
         }
     }
     postOrder(root){
@@ -95,9 +95,9 @@ class BST {
 
     min(root){
         if(!root.left){
-            return root.value
+            return root.value;
         }else{
-            return this.min(root.left)
+            return this.min(root.left);
         }
       
         
@@ -114,6 +114,12 @@ bst.insert(50)
 // bst.preOrder(bst.root)
 // bst.indOrder(bst.root)
 // bst.postOrder(bst.root);
-bst.sera
-bst.delete(50)
-bst.indOrder(bst.root)
+// bst.delete(50)
+// bst.indOrder(bst.root);
+module.exports = {
+    BST
+}
+
+
+
+

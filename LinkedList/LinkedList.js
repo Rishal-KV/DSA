@@ -107,9 +107,9 @@ class LinkedList {
             }
             let nextNode = curr.next;
             curr.next = prev;
-            reverseRecursive(nextNode, curr)
+            reverseRecursive(nextNode, curr);
         }
-        reverseRecursive(this.head, null)
+        reverseRecursive(this.head, null);
     }
     search(pos){
         console.log(pos);
