@@ -6,7 +6,7 @@ bst.insert(15);
 bst.insert(40);
 bst.insert(10);
 
-function isBst(root, man = Number.MIN_SAFE_INTEGER, max = Number.MAX_SAFE_INTEGER){
+function isBst(root, min = Number.MIN_SAFE_INTEGER, max = Number.MAX_SAFE_INTEGER){
     if (!root) {
         return true
     }
