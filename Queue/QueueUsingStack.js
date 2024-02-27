@@ -24,6 +24,7 @@ class Queue {
 
     enqueue(value) {
         this.pushStack.push(value);
+        console.log(this.pushStack.items);
         if (this.popStack.isEmpty()) {
             this.addToPopStack();
         }

@@ -66,3 +66,6 @@ tree.insert(5);
 tree.insert(4);
 // tree.preOrder(tree.root)
 tree.levelOrder()
+module.exports = {
+    tree
+}
