@@ -9,11 +9,11 @@ function quickSort(arr){
     let right = [];
     for(let i = 0; i < arr.length - 1; i++){
             if (arr[i] < pivot) {
-                left.push(arr[i])
+                left.push(arr[i]);
             }else{
-               right.push(arr[i])
+               right.push(arr[i]);
             }
     }
-    return [...quickSort(left),pivot,...quickSort(right)]
+    return [...quickSort(left),pivot,...quickSort(right)];
 }
-console.log(quickSort(arr))
+console.log(quickSort(arr));

@@ -92,7 +92,7 @@ class LinkedList {
         let curr = this.head;
         let nextNode = null;
         while (curr!==null) {
-            nextNode = curr.next
+            nextNode = curr.next;
             curr.next = prev;
             prev = curr;
             curr = nextNode

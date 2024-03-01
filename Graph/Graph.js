@@ -9,7 +9,7 @@ class Graph{
         }
     }
 
-    addEdges(source, destination){
+    addEdge(source, destination){
         if (!this.nodes[source]) {
              this.addNode(source)
         }
@@ -23,10 +23,15 @@ class Graph{
 }
 
 let graph = new Graph();
-graph.addNode('A');
-graph.addNode('B')
-graph.addEdges('A','B')
-graph.addEdges('C','D')
+
+graph.addNode("A");
+graph.addNode("B");
+graph.addNode("C");
+graph.addNode("D");
+graph.addEdge("A", "B");
+graph.addEdge("A", "C");
+graph.addEdge("B", "D");
+
 // console.log(JSON.stringify(graph));
 module.exports = {
     graph

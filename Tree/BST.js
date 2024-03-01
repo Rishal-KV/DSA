@@ -102,21 +102,7 @@ class BST {
       
         
     }
-    DFS(root){
-      let stack = [];
-      stack.push(root)
-      while(stack.length > 0){
-        const currentNode = stack.pop();
-        console.log(currentNode.value);
-        if (currentNode.left) {
-             stack.push(currentNode.left)
-        }
-        if (currentNode.right) {
-            stack.push(currentNode.right)
-        }
-      }
-    }
- 
+  
 }
 
 let bst = new BST();
@@ -124,7 +110,7 @@ bst.insert(30);
 bst.insert(20);
 bst.insert(15);
 bst.insert(21);
-bst.insert(50)
+bst.insert(50);
 bst.preOrder(bst.root)
 bst.indOrder(bst.root)
 bst.postOrder(bst.root);

@@ -1,67 +1,51 @@
-class Node {
-    constructor(key, value) {
-        this.key = key;
-        this.value = value;
-        this.next = null;
+class Node{
+    constructor(key, value){
+        this.key = key,
+        this.value = value
+        this.next = null
     }
 }
 
-class HashTable {
-    constructor(limit) {
-        this.array = new Array(limit);
-        this.size = limit
+class HashTable{
+    constructor(size){
+        this.table = new Array(size);
+        this.size = size
     }
-
-    hash(key) {
-        let hashValue = 0
-        for (let i = 0; i < key.length; i++) {
-            hashValue += key.charCodeAt(i)
+    hash(key){
+        let hashValue = ''
+        for (let index = 0; index < key.length; index++) {
+               
+             hashValue+=key.charCodeAt(index)
         }
-        return hashValue % this.size;
+        return Number(hashValue) % this.size;
+    }
+    insert(key, value){
+        let node = new Node(key, value)
+        let index = this.hash(key)
+        if (!this.table[index]) {
+            this.table[index] = node
+        }else{
+           node.next = this.table[index];
+           this.table[index] = node    
+            }
     }
 
-    set(key, value) {
-        let newNode = new Node(key, value)
+    get(key){
         let index = this.hash(key);
-        if (!this.array[index]) {
-            this.array[index] = newNode
-        } else {
-            let curr = this.array[index]
-            if (curr.key == key) {
-                curr.value = value
-                return
-            }
-            while (curr.next) {
-                curr = curr.next
-            }
-            curr.next = newNode
-        }
-
-    }
-
-    search(key) {
-        let index = this.hash(key);
-        let curr = this.array[index];
+        let curr = this.table[index];
         while (curr) {
             if (curr.key == key) {
                 return curr.value
             }
+
             curr = curr.next
         }
-        return null;
+        return undefined
     }
-
 }
-let myTable = new HashTable(10);
-myTable.set("fyguufyv", "rishal");
-myTable.set("fyguufvy", "rishal");
-myTable.set("name", "rishal");
-myTable.set("eman", "hh");
 
-console.log(myTable.array);
-console.log(myTable.search("name"))
-console.log(myTable.search("eman"))
-
+let table = new HashTable(10);
+table.insert("name", "rishal");
+table.insert("mane", "rishal");
+console.log(table.get('mane'));
  
-
-
