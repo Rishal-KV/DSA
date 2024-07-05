@@ -1,24 +1,21 @@
-function selectionSort(arr){
-    for(let i = 0; i < arr.length; i++){
-        let end = arr.length - i - 1
-        let maxIndex = max(0, end, arr);
-        let temp = arr[end];
-        arr[end] = arr[maxIndex];
-        arr[maxIndex] = temp
+function selectionSort(arr) {
+    for (var i = 0; i < arr.length; i++) {
+        var max = arr.length - i - 1;
+        var maxIndex = findMax(0, max, arr);
+        var temp = arr[max];
+        arr[max] = arr[maxIndex];
+        arr[maxIndex] = temp;
     }
-    return arr
+    return arr;
 }
-
-function max(start, end, arr){
-    let max = end;
-    for(let i = start; i <= end; i++){
-          if (arr[max] < arr[i]) {
-              max = i
-          }
+function findMax(start, end, arr) {
+    var max = end;
+    for (var i = start; i <= end; i++) {
+        if (arr[max] < arr[i]) {
+            max = i;
+        }
     }
     return max;
 }
-
-let array = [1,3,5,6,4];
-let SortedArray = selectionSort(array);
-console.log(SortedArray)
+var sorted = selectionSort([33, 2, 52, 106, 73, 300, 19, 12, 1, 60]);
+console.log(sorted);

@@ -1,18 +1,13 @@
 function insertionSort(arr){
-    for(let i = 0; i < arr.length - 1; i++){
-        for(let j = i + 1; j > 0; j--){
-            if (arr[j] < arr[j - 1]) {
-                let temp = arr[j];
-                arr[j] = arr[j - 1];
-                arr[j - 1] = temp
-            }else{
-                break;
-            }
+    for(let i = 1 ; i < arr.length; i++){
+        let curr = arr[i];
+        let j;
+        for( j = i - 1; j >= 0 && arr[j] > curr; j--){
+            arr[j+1] = arr[j]
         }
+        arr[j+1] = curr
     }
     return arr
 }
-let array = [5,2,6,3,1];
 
-let SortedArray = insertionSort(array)
-console.log(SortedArray);
+console.log(insertionSort([5, 3, 8, 2, 7]))
