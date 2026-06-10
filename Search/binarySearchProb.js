@@ -23,3 +23,4 @@ const sortedArray = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 const targetValue = 0;
 const result = binarySearch(sortedArray, targetValue);
 console.log(`Target ${targetValue} found at index: ${result}`);
+x``;
